@@ -38,7 +38,7 @@ Ensure MPD is running
 
 Metadata will only be displayed for Radio Stations and the Library.
 
-For the `Airplay`, `Spotify`, `Bluetooth`, `Squeezelite` and `Dac Input` renderers, different backgrounds will display.
+For the `Airplay`, `Spotify` and `Bluetooth` renderers, different backgrounds will display.
 
 The overlay colours adjust for light and dark artwork, but can be hard to read with some artwork.
 
@@ -110,7 +110,7 @@ chmod 777 *.sh
 Test the script:
 
 ```
-python3 /home/pi/TFT-MoodeCoverArt/tft_moode_coverart.py
+python3 /home/pi/moodeAdafruitTFTBonnet/moodeAdafruitTFTBonnet.py
 
 
 Ctrl-c to quit
@@ -121,7 +121,7 @@ Ctrl-c to quit
 ### Install as a service.
 
 ```
-cd /home/pi/TFT-MoodeCoverArt
+cd /home/pi/moodeAdafruitTFTBonnet
 ./install_service.sh
 ```
 
@@ -130,7 +130,7 @@ Follow the prompts.
 If you wish to remove the script as a service:
 
 ```
-cd /home/pi/TFT-MoodeCoverArt
+cd /home/pi/moodeAdafruitTFTBonnet
 ./remove_service.sh
 ```
 
