@@ -1,0 +1,73 @@
+# version = "0.0.6"
+moode:
+
+  #Name of the Playlist that ist played when Button B pressed  (without .m3u)
+  defPlaylist: "Party"
+
+display:
+
+
+  # font color (emtpy String if dynamic)
+  fCol: '#ffffff'
+
+  # Display Time Bar:
+  # 1=time bar displayed
+  # 0=no time bar displayed
+  timebar: 1
+
+  # Turn backlight off when mpd state=stop
+  # back on when play restarted
+  # blank=0 screen will not blank when mpd state=stop
+  # blank=n screen will blank after roughly n seconds when mpd state=stop
+  blank: 0
+
+  # Add shadow to text
+  # Shadow is displayed below and to the right
+  # shadow=0 for no shadow text
+  # shadow=n : n is the shadow pixel offset
+  shadow: 3
+
+  # shadow color
+  sCol: '#0F0F0F'
+  
+  #Display cover
+  # 1 cover displayed
+  # 0 no cover displayed
+  covShow: 1
+
+  #Display background color when cover not displayed
+  dispBgCol: '#000000'
+
+  #Display current state Play/Pause Icon
+  # 2 Only pause Icon 
+  # 1 play and pause displayed
+  # 0 no Icon displayed
+  icoShow: 2
+
+  # HEX Color of icons (play, pause, ...)
+  icoFillCol: "#ffffff"
+
+  # HEX Color of icons border (play, pause, ...)
+  icoOutCol: "#FF0000"
+
+  #Y Position volumebar
+  volBarTop: 174
+
+  # volumebar active level color
+  volBarColor: '#ffffff'
+
+  # song progressbar color
+  sProgBarColor: '#ffffff'
+
+  #Y position artist
+  artistTop: 7
+
+  #Y position album
+  albumTop: 35 
+
+  #Y position title
+  titleTop: 105
+
+
+
+
