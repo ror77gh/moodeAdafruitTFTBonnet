@@ -7,7 +7,6 @@ Based on TFT-MoodeCoverArt (https://github.com/rusconi/TFT-MoodeCoverArt).
 
 Works with Adafruit 1.3" Color TFT Bonnet with 240*240 TFT (ST7789), buttons and a joystick.
 
-
 ### Features.
 
 The script will display cover art (where available) for the moode library or radio stations.
@@ -21,9 +20,11 @@ Metadata displayed:
 * Album/Radio Station
 * Title
 
-Overlays with a Time bar, Volume bar and Play/Pause, Next and Volume icons to match the Pirate Audio buttons are optional.
-
-There is also an option in config.yml to not display metadata
+Basic controls:
+* Play/Pause
+* Volume up/down
+* Next/Previous Song
+* Load and Play "default" playlist (config.yml) 
 
 The script has a built in test to see if the mpd service is running. This should allow enough delay when 
 used as a service. If a running mpd service is not found after around 30 seconds the script displays the following and stops.
@@ -74,7 +75,7 @@ sudo pip3 install adafruit-circuitpython-rgb-display
 
 ```
 cd /home/pi
-git clone https://github.com/rusconi/TFT-MoodeCoverArt.git
+git clone https://github.com/ror77gh/moodeAdafruitTFTBonnet.git
 ```
 
 ### Config File
