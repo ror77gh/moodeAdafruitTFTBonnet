@@ -60,8 +60,9 @@ see [**Configuring SPI**](https://learn.adafruit.com/adafruits-raspberry-pi-less
 Install these pre-requisites:
 ```
 sudo apt-get update
-sudo apt-get install python3-rpi.gpio python3-spidev python3-pip python3-pil python3-numpy
+sudo apt-get install python3-rpi.gpio python3-spidev python3-pip python3-pil python3-numpy git
 sudo pip3 install pyyaml
+sudo pip3 install mediafile
 ```
 Install the TFT driver.
 
