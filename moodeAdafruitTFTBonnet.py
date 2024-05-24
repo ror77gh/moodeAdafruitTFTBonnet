@@ -227,6 +227,7 @@ def main():
     backlight.value = True
     
     filename = '/var/local/www/currentsong.txt'
+    BUTTON_A_AND_B_PRESSED_CYCLE = 0
 
     c = 0
     p = 0
@@ -435,10 +436,18 @@ def main():
                  disp.image(img)
                  time.sleep(1.5)            
                 
-             if button_B.value == False and button_A.value == False:  # Button A and B pressed > Sysinfo
+             if button_B.value == True and button_A.value == True:
+                 BUTTON_A_AND_B_PRESSED_CYCLE = 0
+                
+             if button_B.value == False and button_A.value == False and BUTTON_A_AND_B_PRESSED_CYCLE == 15:
+                 draw.rectangle((0,0,WIDTH,HEIGHT),fill=DISP_BACKGROUND_COLOR)
+                 draw.text((10, 45), "Herunterfahren", font=font_m, fill=FONT_COLOR)
+                 os.system("poweroff")
+             
+             if button_B.value == False and button_A.value == False and BUTTON_A_AND_B_PRESSED_CYCLE < 15:  # Button A and B pressed > Sysinfo
+                 BUTTON_A_AND_B_PRESSED_CYCLE = BUTTON_A_AND_B_PRESSED_CYCLE + 1
                  #Clear background
                  draw.rectangle((0,0,WIDTH,HEIGHT),fill=DISP_BACKGROUND_COLOR)
-
                  #IP Adress
                  cmd = "hostname -I | cut -d' ' -f1"
                  ip = subprocess.check_output(cmd, shell=True).decode("utf-8")
@@ -476,6 +485,11 @@ def main():
                  cmd = 'df -h | awk \'$NF=="/"{printf "Disk: %d/%d GB  %s", $3,$2,$5}\''
                  disk = subprocess.check_output(cmd, shell=True).decode("utf-8") 
                  draw.text((10, 95), disk, font=font_m, fill=FONT_COLOR)             
+                 
+                 #Durchlauf
+                 countdown = 15 - BUTTON_A_AND_B_PRESSED_CYCLE
+                 text = "Shutdown in " + str(countdown)
+                 draw.text((10, 145), text, font=font_m, fill=FONT_COLOR)
 
              disp.image(img)
 
